@@ -4,7 +4,8 @@ import "./App.css";
 function App() {
   
   const [result, setResult] = useState("");
-  const [show, setShow] = useState(false)
+  const [show, setShow] = useState(false);
+  const [darkMode, setDarkMode] = useState(false);
 
   function handleClick(e) {
     setResult(result.concat(e.target.name));
@@ -43,12 +44,25 @@ function App() {
   }
 
   return (
+  <div className={darkMode ? "dark-mode" : "light-mode"}>
+     <div className="container">
+        <span style={{ color: darkMode ? "grey" : "yellow" }}>☀︎</span>
+        <div className="switch-checkbox">
+          <label className="switch">
+            <input type="checkbox" onChange={() => setDarkMode(!darkMode)} />
+            <span className="slider round"> </span>
+          </label>
+        </div>
+        <span style={{ color: darkMode ? "#c96dfd" : "grey" }}>☽</span>
+     </div>
+
+
     <div className="app">
       <form>
-        <input type="text" value={result} placeholder="0" disabled/>
+        <input className={darkMode ? "displayDark" : "displayLight"} type="text" value={result} placeholder="0" disabled/>
       </form>
 
-      <div className="keypad">
+      <div className={darkMode ? "keypad-dark" : "keypad-light"}>
         <button id="clear" onClick={clear}>
          AC
         </button>
@@ -116,6 +130,7 @@ function App() {
           <button onClick= { SquareRoot } className="hidebtn" >Square Root</button>
       </div>
         :null}
+    </div>
     </div>
   );
 }
