@@ -38,7 +38,7 @@
 
 button{
   background-color: rgba(0, 0, 0, 0);
-  color: rgb(40, 67, 224);
+  color: rgb(0, 80, 172);
   font-weight: 700;
   font-family: cursive;
   font-size: larger;
@@ -105,6 +105,7 @@ span {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-left: 122px;
 }
 
 .switch {
@@ -144,11 +145,11 @@ span {
 }
 
 input:checked + .slider {
-  background-color: #19a2c1;
+  background-color: #40a82b;
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #2196f3;
+  box-shadow: 0 0 1px #4bfc05;
 }
 
 input:checked + .slider:before {
