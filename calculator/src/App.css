@@ -42,9 +42,11 @@ button{
   font-weight: 700;
   font-family: cursive;
   font-size: larger;
+  border-radius: 5px;
+  box-shadow: 2px 4px 5px #333;
 }
 button:hover{
-  background-color: rgba(166, 255, 0, 0.425);
+  background-color: rgba(108, 110, 105, 0.425);
 }
 
 .keypad-light {
@@ -72,7 +74,11 @@ button:hover{
 
 input[type="text"] {
   height: 50px;
-  width: 250px;
+  width: 248px;
+  box-shadow: 2px 2px 5px #333;
+  border-radius: 5px;
+  font-size: 30px;
+  font-family: cursive;
 }
 
 #clear {
