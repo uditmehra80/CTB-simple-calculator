@@ -12,7 +12,26 @@ function App() {
   }
 
   function ClickOperation(e) {
-    setResult(eval(result)  +  (e.target.name) );
+     if(result==""){
+       setResult(e.target.name)
+     }
+     else{ 
+        if(result.charAt(result.length-1)==="+"){
+             setResult(result.slice(0, -1) + e.target.name);
+        }
+        else if(result.charAt(result.length-1)==="-"){
+          setResult(result.slice(0, -1) + e.target.name);
+        }
+        else if(result.charAt(result.length-1)==="*"){
+          setResult(result.slice(0, -1) + e.target.name);
+        }
+        else if(result.charAt(result.length-1)==="/"){
+          setResult(result.slice(0, -1) + e.target.name);
+        }
+        else{
+          setResult(eval(result)  +  (e.target.name) );
+        }
+     }
   }
 
   function backspace() {
