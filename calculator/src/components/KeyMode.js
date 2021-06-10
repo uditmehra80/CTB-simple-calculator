@@ -2,24 +2,24 @@ import React from "react";
 
 export default function KeyMode({show, setShow,result,setResult}){
 
-     function SignClick(){
-    setResult(eval(result)*(-1));
-     }
+    function SignClick(){
+     setResult(eval(result)*(-1));
+    }
   
-     function SquareClick(){
-    setResult(eval(result)**2);
-     }
+    function SquareClick(){
+     setResult(eval(result)**2);
+    }
 
-     function SquareRoot(){
+    function SquareRoot(){
      setResult(eval(result)**(1/2));
-     }
+    }
 
     return(<>
         <div className="middle">
           <button onClick={() => setShow(!show)}>Scientific Mode</button>
-         </div>
+        </div>
       
-        { show?
+         { show?
          <div className="middle-hide">
           <button onClick= { SignClick } className="hidebtn" >Sign</button>
           <button onClick= { SquareClick } className="hidebtn" >Square</button>
